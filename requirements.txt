@@ -1,0 +1,21 @@
+# Data manipulation & Math
+numpy
+pandas
+pyarrow
+
+# Machine Learning & Deep Learning
+tensorflow
+scikit-learn
+keras-tuner
+
+# Astronomy Specific
+astropy
+astroquery
+
+# Visualization
+matplotlib
+seaborn
+
+# Jupyter Environment (Optional but recommmended)
+notebook
+ipykernel
