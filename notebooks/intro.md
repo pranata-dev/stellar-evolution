@@ -10,26 +10,27 @@ This directory contains the step-by-step implementation of the project, organize
 * Downloads the required astrometric and photometric data.
 * Saves the raw data locally.
 
-**2. Data Preparation**
-* '02_preprocessing.ipynb'
-* Handle missing values and outliers.
-* Performs featureengineering (calculating absolute magnitude, etc).
-* Splits data into Training, Validation, and Test sets.
-* Applies normalization/scaling appropriate for Neural Networks.
+**2. Preprocessing and Exploratory Data Analysis (EDA)**
+*'02_preprocessing_and_EDA.ipynb'
+* **Cleaning:** Handles missing values, outliers, and negative parallaxes
+* **Feature Engineering:** Calculates Absolute Magnitude ($M_G$), Color index ($G_{BP}-G_{RP}$), and Tangential Velocity
+* **EDA:** Visualizes the Hertzsprung-Russell (HR) Diagram, Galactic Maps, and Feature Correlations
+* **Preparation:** Scales data (Quantile Transformer) and splits into Training/Test sets.
 
-**3. Model Training (The Core)**
-* ' 03_model_mlp.ipynb'
-* Implementation of the Pre-Norm ResNet MLP (Baseline model).
-* Training loop with residual connections.
-* ' 04_model_transformer.ipynb'
-* Implementation of the Pre-Norm FT-Transformer (Feature Tokenizer) architecture
-* Includes the training loop with Pre-Norm and Warmup scheduler
+**3. Classification Task (Evolutionary Phases)**
+* '03_model_classification.ipynb'
+* Defines and trains two architectures: Pre-Norm ResNet MLP and Pre-Norm FT-Transformer.
+* Objective: Classify stars into 5 phases (Main sequence, Sub-Giant, Giant, Supergiant, and White dwarf).
+* Evaluation: Confusion Matrices, Accuracy, and F1-Score comparison.
 
-**4. Analysis**
-* '05_evaluation_analysis.ipynb'
-* Loads the trained models.
-* Visualizes performance: Loss Curves, Confusion Matrices, and ROC Curves.
-* Physics check: Reconstructs the Hertzsprung-Russell Diagram (HR Diagram) using predicted values vs actual Gaia Data
+**4. Regression Task (Stellar Mass & Age)**
+* '04_model_regression.ipynb'
+* Defines and trains the regression variation of the Pre-Norm ResNet MLP and Pre-Norm FT-Transformer.
+* Objective: Predict fundamental parameters: Stellar mass and Age.
+* Includes Warmup scheduler and custom R2-Scores metrices
+* Evaluation: MAE, R2, and Physical Error Analysis (converting log predictions back to solar units/Gyr)
 
+---
+**Notes:** Ensure you have installed the dependencies listed in '../requirements.txt' before running these notebooks.
 ---
 **Notes:** Ensure you have installed the dependencies listed in '../requeirements.txt' before running these notebooks.
