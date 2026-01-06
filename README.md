@@ -1,3 +1,10 @@
+**ACADEMIC INTEGRITY NOTICE**
+This repository contains the source code for my ongoing undergraduate thesis at IPB University
+
+**Status:** Work in Progress (WIP).
+**Usage:** This code is published for portfolio and educational purpose only. Plagiarism and unauthorized use for academic submissions is strictly prohibited.
+**Publication:** A Scientific paper based on this work is currently in preparation.
+
 # Stellar Evolution Analysis using Pre-Norm FT-Transformer and Pre-Norm ResNet MLP model
 
 ## PROJECT OVERVIEW
