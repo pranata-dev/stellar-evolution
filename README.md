@@ -27,6 +27,12 @@ An enhanced Multilayer Perceptron inspired by ResNet (Residual Networks). Utiliz
 from the vanishing gradient problem.
 *Optimization:* Uses Pre-Noralization layers before activation functions to smooth the loss landscape.
 
+## Tech Stack
+**Core Framework:** PyTorch.
+**Libraries:** 'rtdl' (Revisiting Tabular Deep Learning) or Custom Implementation, Scikit-learn, Pandas.
+**Visualization:** Matplotlib, Seaborn.
+**Physics Tools:** Astropy, Astroquery
+
 ## Citation / Author
 Created by **Dzulfikar Yudha Pranata** as part of the Physics Bachelor's Thesis at IPB University
 * **Email:** [dzulfikaryudha@gmail.com]
